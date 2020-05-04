@@ -9,6 +9,7 @@
         "start": "node index.js"
     },
     "dependencies": {
-        "azure-storage": "^2.10.3"
+        "azure-storage": "^2.10.3",
+        "dotenv": "^8.2.0"
     }
 }
