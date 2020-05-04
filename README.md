@@ -1,18 +1,13 @@
----
-page_type: sample
-languages:
-- nodejs
-- javascript
-products:
-- azure
-- azure-app-service
-description: "This sample demonstrates a tiny Hello World Node.js app for Azure App Service."
----
+# Node x Azure Queue Storage
 
-# Node.js Hello World
+- [参考](https://docs.microsoft.com/ja-jp/azure/storage/queues/storage-nodejs-how-to-use-queues)
 
-This sample demonstrates a tiny Hello World node.js app for [App Service Web App](https://docs.microsoft.com/azure/app-service-web).
+## 準備
+- `.env`に以下の環境変数を設定
+    - AZURE_STORAGE_ACCOUNT
+    - AZURE_STORAGE_ACCESS_KEY
+    - AZURE_STORAGE_CONNECTION_STRING
 
-## Contributing
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## できること
+- `npm start`で起動し、別でcreateMessge.jsを引数（数字）と一緒に実行する
+- 指定したストレージアカウントにメッセージが作られると同時に、それを自動で32件ずつデキューする
